@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            // $table->string('roles');
-            $table->string('created_at');
+            // $table->string('role');
+            $table->date('created_at');
             $table->string('role_type');
             $table->string('password');
             $table->string('mobile');

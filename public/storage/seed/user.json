@@ -3,49 +3,49 @@
         "firstname": "David",
         "lastname": "Wagner",
         "email": "david_wagner@example.com",
-        "created_at": "24/10/2015",
+        "created_at": "2015-10-24",
         "role_type": "CEO and Founder"
     },
     {
         "firstname": "Ina",
         "lastname": "Hogan",
         "email": "windler.warren@runte.net",
-        "created_at": "24/10/2015",
+        "created_at": "2015-10-24",
         "role_type": "Team Lead"
     },
     {
         "firstname": "Devin",
         "lastname": "Harmon",
         "email": "wintheiser_enos@yahoo.com",
-        "created_at": "18/12/2015",
+        "created_at": "2015-12-18",
         "role_type": "HR"
     },
     {
         "firstname": "Lena",
         "lastname": "Page",
         "email": "camila_ledner@gmail.com",
-        "created_at": "08/10/2016",
+        "created_at": "2016-10-08",
         "role_type": "App Designer"
     },
     {
         "firstname": "Edu",
         "lastname": "Horton",
         "email": "edula_dorton1221@gmail.com",
-        "created_at": "15/06/2017",
+        "created_at": "2017-06-15",
         "role_type": "CEO and Founder"
     },
     {
         "firstname": "Victoria",
         "lastname": "Perez",
         "email": "terrill.wiza@hotmail.com",
-        "created_at": "12/01/2019",
+        "created_at": "2019-01-12",
         "role_type": "HR"
     },
     {
         "firstname": "Cora",
         "lastname": "Medina",
         "email": "hagnes.isai@hotmail.com",
-        "created_at": "21/07/2020",
+        "created_at": "2020-07-21",
         "role_type": "Web Developer"
     }
 ]

@@ -82,6 +82,7 @@ class UserController extends Controller
             'lastname' => 'required',
             'email' => 'required|email|unique:users,email',
             // 'roles' => 'required',
+            "created_at" => \Carbon\Carbon::now()->format('Y-m-d'),
             'role_type' => 'required',
             'password' => 'required|min:8|confirmed',
             'mobile' => 'required',
