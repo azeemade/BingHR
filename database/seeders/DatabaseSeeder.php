@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
                 "firstname" => $value->firstname,
                 "lastname" => $value->lastname,
                 "email" => $value->email,
-                "role" => $value->role,
+                // "roles" => $value->roles,
                 "created_at" => $value->created_at,
                 "role_type" => $value->role_type,
                 "password" => Hash::make($faker->password(8, 15)),

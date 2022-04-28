@@ -3,7 +3,6 @@
         "firstname": "David",
         "lastname": "Wagner",
         "email": "david_wagner@example.com",
-        "role": "1",
         "created_at": "24/10/2015",
         "role_type": "CEO and Founder"
     },
@@ -11,7 +10,6 @@
         "firstname": "Ina",
         "lastname": "Hogan",
         "email": "windler.warren@runte.net",
-        "role": "2",
         "created_at": "24/10/2015",
         "role_type": "Team Lead"
     },
@@ -19,7 +17,6 @@
         "firstname": "Devin",
         "lastname": "Harmon",
         "email": "wintheiser_enos@yahoo.com",
-        "role": "3",
         "created_at": "18/12/2015",
         "role_type": "HR"
     },
@@ -27,7 +24,6 @@
         "firstname": "Lena",
         "lastname": "Page",
         "email": "camila_ledner@gmail.com",
-        "role": "4",
         "created_at": "08/10/2016",
         "role_type": "App Designer"
     },
@@ -35,7 +31,6 @@
         "firstname": "Edu",
         "lastname": "Horton",
         "email": "edula_dorton1221@gmail.com",
-        "role": "1",
         "created_at": "15/06/2017",
         "role_type": "CEO and Founder"
     },
@@ -43,7 +38,6 @@
         "firstname": "Victoria",
         "lastname": "Perez",
         "email": "terrill.wiza@hotmail.com",
-        "role": "3",
         "created_at": "12/01/2019",
         "role_type": "HR"
     },
@@ -51,7 +45,6 @@
         "firstname": "Cora",
         "lastname": "Medina",
         "email": "hagnes.isai@hotmail.com",
-        "role": "4",
         "created_at": "21/07/2020",
         "role_type": "Web Developer"
     }
