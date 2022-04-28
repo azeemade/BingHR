@@ -14,18 +14,18 @@ class UserController extends Controller
 {
     //
 
-    function __construct()
-    {
-        $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index', 'store']]);
-        $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
-        $this->middleware('permission:user-edit', ['only' => ['edit', 'update']]);
-        $this->middleware('permission:user-delete', ['only' => ['destroy']]);
-    }
+    // function __construct()
+    // {
+    //     $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index', 'store']]);
+    //     $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
+    //     $this->middleware('permission:user-edit', ['only' => ['edit', 'update']]);
+    //     $this->middleware('permission:user-delete', ['only' => ['destroy']]);
+    // }
 
     public function index()
     {
-        $data = User::all();
-        return view('users.index', compact('data'));
+        $users = User::all();
+        return view('pages.index', compact('users'));
     }
 
     public function create()

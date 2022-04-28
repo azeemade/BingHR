@@ -1,0 +1,42 @@
+<div class="flex-col flex space-y-6 pt-20  h-full">
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-window"></i>
+        Dashboard
+    </a>
+    <a href="{{ route('root') }}" class="text-sky-300 border-r border-r-sky-300">
+        <i class="bi bi-people"></i>
+        Users
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-menu-button-wide"></i>
+        Departments
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-people"></i>
+        Employee
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-lightning-charge"></i>
+        Activities
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-check2-circle"></i>
+        Holiday
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-asterisk"></i>
+        Events
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-keyboard"></i>
+        Payroll
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-person"></i>
+        Accounts
+    </a>
+    <a href=""  class="text-gray-500">
+        <i class="bi bi-exclamation-circle"></i>
+        Report
+    </a>
+</div>

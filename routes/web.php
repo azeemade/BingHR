@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'UserController@index')->name('root');
-Route::post('/user/store', 'UserController@store')->name('user.store');
-Route::get('/user/{id}', 'UserController@show')->name('user.show');
-Route::put('/user/{id}', 'UserController@update')->name('user.update');
-Route::delete('/user/{id}', 'UserController@destroy')->name('user.destroy');
+Route::get('/', [UserController::class, 'index'])->name('root');
+Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
+Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.destroy');
