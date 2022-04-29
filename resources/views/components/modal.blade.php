@@ -91,22 +91,20 @@
                         </thead>
                         <tbody class="bg-white">
                             @foreach($roles as $role)
-                                @foreach($user->getAllPermissions() as $val)
-                                    <tr class="border border-gray-200">
-                                        <td class="p-3 text-sm">
-                                            {{ $role }}
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="read" value="{{ $val }}">
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="write" value="{{ $val }}">
-                                        </td>
-                                        <td>
-                                            <input type="checkbox" name="delete" value="{{ $val }}">
-                                        </td>
-                                    </tr>
-                                @endforeach
+                                <tr class="border border-gray-200">
+                                    <td class="p-3 text-sm">
+                                        {{ $role }}
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="read" value="read">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="write" value="write">
+                                    </td>
+                                    <td>
+                                        <input type="checkbox" name="delete" value="delete">
+                                    </td>
+                                </tr>
                             @endforeach
                         </tbody>
                     </table>

@@ -66,7 +66,7 @@
                     </td>
                 @endforeach
                 <td class="text-sm">
-                    {{ $user->created_at }}
+                    {{ \Carbon\Carbon::parse($user->created_at)->format('j F, Y') }}
                 </td>
                 <td class="text-sm">
                     {{ $user->role_type }}

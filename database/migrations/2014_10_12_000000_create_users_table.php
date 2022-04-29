@@ -18,9 +18,8 @@ return new class extends Migration
             $table->string('firstname');
             $table->string('lastname');
             $table->string('email')->unique();
-            // $table->string('role');
             $table->date('created_at');
-            $table->string('role_type');
+            $table->string('role_type')->nullable();
             $table->string('password');
             $table->string('mobile');
             $table->string('username');

@@ -12,27 +12,10 @@ use Spatie\Permission\Models\Role;
 
 class UserController extends Controller
 {
-    //
-
-    // function __construct()
-    // {
-    //     $this->middleware('permission:user-list|user-create|user-edit|user-delete', ['only' => ['index', 'store']]);
-    //     $this->middleware('permission:user-create', ['only' => ['create', 'store']]);
-    //     $this->middleware('permission:user-edit', ['only' => ['edit', 'update']]);
-    //     $this->middleware('permission:user-delete', ['only' => ['destroy']]);
-    // }
-
     public function index()
     {
         $users = User::all();
         return view('pages.index', compact('users'));
-    }
-
-    public function create()
-    {
-        // $roles = Role::pluck('name', 'name')->all();
-
-        // return view('users.create', compact('roles'));
     }
 
     public function store(Request $request)
@@ -40,16 +23,15 @@ class UserController extends Controller
         $request->validate([
             'firstname' => 'required',
             'lastname' => 'required',
-            'email' => 'required|email|unique:users,email',
-            // 'roles' => 'required',
-            'role_type' => 'required',
+            'email' => 'required|email',
             'password' => 'required|min:8|confirmed',
             'mobile' => 'required',
-            'username' => 'required|unique'
+            'username' => 'required'
         ]);
 
         $input = $request->all();
         $input['password'] = Hash::make($input['password']);
+        $input['created_at'] = \Carbon\Carbon::now()->format('Y-m-d');
 
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
@@ -58,32 +40,13 @@ class UserController extends Controller
             ->with('success', 'User created successfully.');
     }
 
-    public function show($id)
-    {
-        $user = User::find($id);
-        $roles = Role::pluck('name', 'name')->all();
-        $userRole = $user->roles->pluck('name', 'name')->all();
-
-        $data = [
-            "user" => $user,
-            "roles" => $roles,
-            "userRole" => $userRole
-        ];
-
-        return response()->json([
-            'data' => $data
-        ]);
-    }
-
     public function update(Request $request, $id)
     {
         $this->validate($request, [
             'firstname' => 'required',
             'lastname' => 'required',
             'email' => 'required|email',
-            // 'roles' => 'required',
             "created_at" => \Carbon\Carbon::now()->format('Y-m-d'),
-            // 'role_type' => 'required',
             'password' => 'required|min:8|confirmed',
             'mobile' => 'required',
             'username' => 'required'
