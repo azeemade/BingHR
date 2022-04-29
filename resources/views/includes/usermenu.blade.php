@@ -1,3 +1,10 @@
+@if ($message = Session::get('success'))
+    <div class="alert bg-green-100 rounded-lg py-5 px-6 mb-3 text-base text-green-700 inline-flex items-center w-full alert-dismissible fade show" role="alert">
+        {{ $message }}
+        <button type="button" class="btn-close box-content w-4 h-4 p-1 ml-auto text-yellow-900 border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-yellow-900 hover:opacity-75 hover:no-underline" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+@endif
+
 <div class="flex justify-between bg-white p-3 items-center">
     <div>
         <p class="text-lg font-medium">List Users</p>
@@ -65,16 +72,20 @@
                     {{ $user->role_type }}
                 </td>
                 <td>
-                    <form action="{{ route('user.destroy', $user->id) }}" method="Post">
-                        <button class="mr-3">
+                    <div class="flex">
+                        <button class="mr-3" data-bs-toggle="modal" data-bs-target="#exampleModal{{$user->id}}">
                             <i class="bi bi-pencil text-gray-500"></i>
                         </button>
-                        @csrf
-                        @method('DELETE')
-                        <button>
-                            <i class="bi bi-trash text-gray-500"></i>
-                        </button>
-                    </form>
+                        <form action="{{ route('user.destroy', $user->id) }}" method="Post">
+                            @csrf
+                            @method('DELETE')
+                            <button>
+                                <i class="bi bi-trash text-gray-500"></i>
+                            </button>
+                        </form>
+                        <x-modal :user="$user"></x-modal>
+                        
+                    </div>
                 </td>
             </tr>
         @endforeach

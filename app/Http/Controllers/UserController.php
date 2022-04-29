@@ -24,8 +24,7 @@ class UserController extends Controller
 
     public function index()
     {
-        $users = User::with('roles')->get();
-        // echo $users;
+        $users = User::all();
         return view('pages.index', compact('users'));
     }
 
@@ -55,7 +54,7 @@ class UserController extends Controller
         $user = User::create($input);
         $user->assignRole($request->input('roles'));
 
-        return redirect()->route('users.index')
+        return redirect()->route('root')
             ->with('success', 'User created successfully.');
     }
 
@@ -81,13 +80,13 @@ class UserController extends Controller
         $this->validate($request, [
             'firstname' => 'required',
             'lastname' => 'required',
-            'email' => 'required|email|unique:users,email',
+            'email' => 'required|email',
             // 'roles' => 'required',
             "created_at" => \Carbon\Carbon::now()->format('Y-m-d'),
-            'role_type' => 'required',
+            // 'role_type' => 'required',
             'password' => 'required|min:8|confirmed',
             'mobile' => 'required',
-            'username' => 'required|unique'
+            'username' => 'required'
         ]);
 
         $input = $request->all();
@@ -107,7 +106,7 @@ class UserController extends Controller
 
         $user->assignRole($request->input('roles'));
 
-        return redirect()->route('users.index')
+        return redirect()->route('root')
             ->with('success', 'User updated successfully.');
     }
 
@@ -115,7 +114,7 @@ class UserController extends Controller
     {
         User::find($id)->delete();
 
-        return redirect()->route('users.index')
+        return redirect()->route('root')
             ->with('success', 'User deleted successfully.');
     }
 }

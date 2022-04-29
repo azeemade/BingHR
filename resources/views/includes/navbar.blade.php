@@ -2,8 +2,7 @@
     <div class="flex items-center">
         <p class="mr-6 font-medium text-lg">Users</p>
         <div class="mr-4">
-            <select class="form-select
-            block
+            <select class="block
             w-full
             px-3
             py-1.5
